@@ -15,7 +15,7 @@ export class FilmeService {
     return this.http.get<Filme[]>(`${api}/filme`);
   }
   
-  postFilmes(filme: any){
+  postFilmes(filme: Filme): Observable<any>{
     return this.http.post(`${api}/filme`,filme);
   }
 }

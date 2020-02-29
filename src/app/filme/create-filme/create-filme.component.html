@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Criar Filme</h2>
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit(movieForm.value)" novalidates>
+        <div class="form-group">
+            <label for="nome">Nome: </label><br>
+            <input class="form-control" type="text" formControlName="nome" placeholder="Insira o nome" name="nome" [(ngModel)]="movieForm.nome"/>
+        </div>
+        <br><br>
+        <div class="form-group">
+            <label for="descricao">Descrição: </label><br>
+            <input class="form-control" type="text" placeholder="Insira a descricao" formControlName="descricao" name="descricao" [(ngModel)]="movieForm.descricao"/>
+        </div>
+        <br><br>
+        <button type="submit" [disabled]="movieForm.invalid">Salvar</button>
+    </form>
+</div>

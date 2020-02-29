@@ -23,5 +23,4 @@ export class FilmeComponent implements OnInit {
       this.Filmes = res['data']
     })
   }
-
 }

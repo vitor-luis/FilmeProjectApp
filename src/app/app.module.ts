@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 import { FilmeComponent } from './filme/filme.component';
 
 import { FilmeService } from './filme/filme.service';
-import { FormsModule} from '@angular/forms';
-import { CreateFilmeComponent } from './create-filme/create-filme.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CreateFilmeComponent } from './filme/create-filme/create-filme.component';
 
 
 @NgModule({
@@ -25,6 +25,7 @@ import { CreateFilmeComponent } from './create-filme/create-filme.component';
     HttpClientModule,
     HttpModule,
     RouterModule.forRoot(ROUTES),
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [FilmeService],
